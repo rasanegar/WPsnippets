@@ -1,0 +1,13 @@
+# this is the basic Wordpress .htaccess file content in case you change it or 
+# you are moving back  to a Apahce / Lite [seed host and there is no .htaccess file by defult
+# Updated on 2018/05 by rasanegar.com
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
